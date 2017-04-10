@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# bin/detect <build-dir>
 
-echo "git-commit-buildpack"
+echo "commit-hash-buildpack"
 exit 0

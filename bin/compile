@@ -1,31 +1,7 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
 
 BUILD_DIR=$1
-CACHE_DIR=$2
-LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
-ls /
-
-env
-
-cd $BUILD_DIR
-
-git rev-parse HEAD
-
-
-# using undocumented directory
-cd $GIT_DIR
-
-ls -al
-
-cat ./HEAD
-
-echo "=====> getting commit hash"
-COMMIT_HASH=$(git rev-parse HEAD)
-
-
-
-echo "=====> Saving $COMMIT_HASH to env"
+echo "=====> Saving $SOURCE_VERSION to env"
 mkdir -p $BUILD_DIR/.profile.d
-echo "export COMMIT_HASH=\"\$COMMIT_HASH\"" > $BUILD_DIR/.profile.d/commit_hash.sh
+echo "export SOURCE_VERSION=\"\$SOURCE_VERSION\"" > $BUILD_DIR/.profile.d/commit_hash.sh
