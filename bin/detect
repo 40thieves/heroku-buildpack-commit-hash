@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 echo "commit-hash-buildpack"
+
+# Always runs
 exit 0
