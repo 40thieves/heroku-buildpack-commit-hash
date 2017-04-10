@@ -4,5 +4,5 @@ BUILD_DIR=$1
 
 echo "=====> Saving $SOURCE_VERSION to env"
 mkdir -p $BUILD_DIR/.profile.d
-echo "export SOURCE_VERSION=\"\$SOURCE_VERSION\"" > $BUILD_DIR/.profile.d/commit_hash.sh
+echo "export SOURCE_VERSION=$SOURCE_VERSION" > $BUILD_DIR/.profile.d/commit_hash.sh
 chmod u+x $BUILD_DIR/.profile.d/commit_hash.sh
